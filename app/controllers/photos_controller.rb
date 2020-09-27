@@ -5,8 +5,8 @@ class PhotosController < ApplicationController
     end 
 
     def create 
-        @photo = Photo.create(photo_parmas)
-        if @photo.vaild? 
+        @photo = Photo.create(photo_params)
+        if @photo.valid? 
             render json: @photo, status: 201 
         else 
             render json: @photo.errors.full_messages
@@ -34,7 +34,7 @@ class PhotosController < ApplicationController
     private 
 
         def photo_params
-            params.permit(:description, :book_id, img_url)
+            params.permit(:description, :book_id, :img_url)
         end 
     end
 
