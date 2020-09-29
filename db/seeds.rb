@@ -13,9 +13,9 @@ Category.destroy_all
 
 may = User.create(name: "may", bio: "I love traveling!")
 book1 = Book.create(user_id: may.id, title:"Travel 101")
-photo1 = Photo.create(description: "Playful Day", book_id: book1.id, img_url:"https://frontiersinblog.files.wordpress.com/2018/05/psychology-playful-boys-gender-difference-children-education.jpg")
-photo2 = Photo.create(description: "Day in the Desert!", book_id: book1.id, img_url:"https://cdn.fstoppers.com/styles/large-16-9/s3/lead/2015/06/travel-photography-career-sahara-morocco-camels-hillary-fox.jpg")
-photo3 = Photo.create(description: "Travel Pic", book_id: book1.id, img_url:"https://afar-production.imgix.net/uploads/images/afar_post_headers/images/AaiDxuPdl8/original_italy_20reopening_20june_203.jpg")
+photo1 = Photo.create(description: "Playful Day", book_id: book1.id, img_url:"https://frontiersinblog.files.wordpress.com/2018/05/psychology-playful-boys-gender-difference-children-education.jpg", likes: 1)
+photo2 = Photo.create(description: "Day in the Desert!", book_id: book1.id, img_url:"https://cdn.fstoppers.com/styles/large-16-9/s3/lead/2015/06/travel-photography-career-sahara-morocco-camels-hillary-fox.jpg", likes: 2)
+photo3 = Photo.create(description: "Travel Pic", book_id: book1.id, img_url:"https://afar-production.imgix.net/uploads/images/afar_post_headers/images/AaiDxuPdl8/original_italy_20reopening_20june_203.jpg", likes: 5)
 
 comment1 = Comment.create(user_id: may.id, photo_id:photo1.id, content: "I love this picture!")
 travelbook = Category.create(book_id: book1.id, title: "Travel Photos")

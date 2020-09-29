@@ -34,7 +34,7 @@ class PhotosController < ApplicationController
     private 
 
         def photo_params
-            params.permit(:description, :book_id, :img_url)
+            params.permit(:description, :book_id, :img_url, :likes)
         end 
     end
 
