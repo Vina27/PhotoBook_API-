@@ -19,7 +19,7 @@ class PhotosController < ApplicationController
         end 
 
         def update 
-            @photo = Photo.find(parmas[:id])
+            @photo = Photo.find(params[:id])
             @photo.update(photo_params)
             render json: @photo
         end 
